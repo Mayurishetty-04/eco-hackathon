@@ -1,0 +1,87 @@
+# ============================================================
+# REFERENCE pubspec.yaml — EcoTrack Flutter App
+# Architecture: Feature-first Flutter app
+# ============================================================
+# After running `flutter create`, merge the dependencies below
+# into your generated pubspec.yaml.
+# ============================================================
+
+name: ecotrack
+description: A sustainability & waste management app — hackathon edition.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # -----------------------------------------------------------
+  # STATE MANAGEMENT — Provider (simple, hackathon-friendly)
+  # -----------------------------------------------------------
+  provider: ^6.1.2              # Simple, low-boilerplate state management
+
+  # -----------------------------------------------------------
+  # NAVIGATION
+  # -----------------------------------------------------------
+  go_router: ^14.1.4            # Declarative routing (or use Navigator)
+
+  # -----------------------------------------------------------
+  # NETWORKING
+  # -----------------------------------------------------------
+  dio: ^5.4.3                   # HTTP client for REST API calls
+  connectivity_plus: ^6.0.3     # Check if device has internet
+
+  # -----------------------------------------------------------
+  # LOCAL STORAGE
+  # -----------------------------------------------------------
+  shared_preferences: ^2.2.3    # Store tokens, user prefs locally
+
+  # -----------------------------------------------------------
+  # ENVIRONMENT CONFIG
+  # -----------------------------------------------------------
+  flutter_dotenv: ^5.1.0        # Load .env variables at runtime
+
+  # -----------------------------------------------------------
+  # DATA / SERIALIZATION
+  # -----------------------------------------------------------
+  freezed_annotation: ^2.4.1    # Immutable model classes (optional)
+  json_annotation: ^4.9.0       # JSON serialization
+
+  # -----------------------------------------------------------
+  # UTILITIES
+  # -----------------------------------------------------------
+  logger: ^2.3.0                # Clean structured logging
+  intl: ^0.19.0                 # Date/number formatting
+
+  # -----------------------------------------------------------
+  # UI / THEMING
+  # -----------------------------------------------------------
+  google_fonts: ^6.2.1          # Clean fonts (Inter, Poppins, etc.)
+  flutter_svg: ^2.0.10+1        # SVG icons/assets
+  cached_network_image: ^3.3.1  # Network images with caching
+  shimmer: ^3.0.0               # Loading skeleton placeholders
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code generation (only if using Freezed models)
+  build_runner: ^2.4.11
+  freezed: ^2.5.2
+  json_serializable: ^6.8.0
+
+  # Linting
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Uncomment and configure after adding assets:
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/
+  #   - .env
